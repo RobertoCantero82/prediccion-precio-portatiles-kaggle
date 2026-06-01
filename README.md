@@ -168,7 +168,7 @@ print(f"Precio estimado: {prediccion_euros[0]:.2f} €")
 
 **Roberto Cantero** — [@RobertoCantero82](https://github.com/RobertoCantero82)
 
-Bootcamp Machine Learning · The Bridge · 2025
+Bootcamp Data Science · The Bridge · 2026
 
 ---
 
