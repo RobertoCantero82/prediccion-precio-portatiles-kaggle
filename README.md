@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="banner.svg" alt="Laptop Price Predictor — #1 Private Leaderboard" width="100%"/>
+<img src="https://raw.githubusercontent.com/RobertoCantero82/nombre-repo/main/banner.svg" .../>
 
 </div>
 
