@@ -28,13 +28,18 @@ La clave del éxito: apostar por **features causales y numéricas** que reflejan
 ## 🗂️ Estructura del repositorio
 
 ```
-laptop-price-prediction/
+prediccion-precio-portatiles-kaggle/
 ├── 📓 trabajo_v7.ipynb          # Notebook principal (EDA + FE + modelo)
-├── 🤖 v7_XGBoost.pkl            # Modelo entrenado (pickle)
+├── 📓 trabajo_inicial.ipynb     # Notebook versión inicial
+├── 🤖 v7_XGBoost.pkl            # Modelo final entrenado (pickle)
+├── 🤖 modelo_v1.pkl             # Modelo versión inicial (pickle)
 ├── 📤 submission_v7.csv         # Predicciones finales enviadas a Kaggle
-├── 📁 data/
-│   ├── train.csv                # Dataset de entrenamiento (ver nota*)
-│   └── test.csv                 # Dataset de test (ver nota*)
+├── 📤 submission1.csv           # Predicciones versión inicial
+├── 📊 train.csv                 # Dataset de entrenamiento (ver nota*)
+├── 📊 test.csv                  # Dataset de test (ver nota*)
+├── 📊 sample_submission.csv     # Formato de entrega Kaggle
+├── 🖼️ laptop_price_predictor_banner.svg  # Banner animado del README
+├── ⚖️ LICENSE
 └── 📖 README.md
 ```
 
