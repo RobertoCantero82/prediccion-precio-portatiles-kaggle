@@ -1,65 +1,79 @@
 <svg width="100%" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Predicción de Precio de Portátiles — Roberto Cantero</title>
   <desc>Banner animado para prediccion-precio-portatiles-kaggle</desc>
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-      .mo { font-family: 'Share Tech Mono','Courier New', monospace; fill: #ff4d4d; }
-      .glow { animation: pulse 3s ease-in-out infinite; }
-      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.72} }
-      .ascii-row { animation: faderow 0.5s ease both; }
-      .r1{animation-delay:.10s} .r2{animation-delay:.25s} .r3{animation-delay:.40s}
-      .r4{animation-delay:.55s} .r5{animation-delay:.70s} .r6{animation-delay:.85s}
-      @keyframes faderow { from{opacity:0;transform:translateX(-6px)} to{opacity:1;transform:translateX(0)} }
-      .byline { animation: faderow .6s ease 1.1s both; }
-      .title  { animation: faderow .6s ease 1.4s both; }
-      .ico    { animation: faderow .7s ease .9s both; }
-      .cur { animation: blink 1s step-end infinite; }
-      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-      .scanline { animation: scan 2.8s linear infinite; }
-      @keyframes scan { 0%{transform:translateY(0)} 100%{transform:translateY(220px)} }
-    </style>
-  </defs>
 
   <rect x="0" y="0" width="680" height="220" rx="8" fill="#1a0a0a"/>
-  <line class="scanline" x1="0" y1="-220" x2="680" y2="-220" stroke="#ff4d4d" stroke-width="1" opacity=".12"/>
 
+  <!-- esquinas decorativas -->
   <polyline points="24,14 14,14 14,24" stroke="#ff4d4d" stroke-width="1.5" fill="none" opacity=".4"/>
   <polyline points="656,14 666,14 666,24" stroke="#ff4d4d" stroke-width="1.5" fill="none" opacity=".4"/>
   <polyline points="24,206 14,206 14,196" stroke="#ff4d4d" stroke-width="1.5" fill="none" opacity=".4"/>
   <polyline points="656,206 666,206 666,196" stroke="#ff4d4d" stroke-width="1.5" fill="none" opacity=".4"/>
 
-  <g class="ico">
+  <!-- scanline SMIL -->
+  <line x1="0" y1="0" x2="680" y2="0" stroke="#ff4d4d" stroke-width="1" opacity=".12">
+    <animateTransform attributeName="transform" type="translate" from="0,0" to="0,220" dur="2.8s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- PORTÁTIL izquierda -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.5s" fill="freeze"/>
+    <!-- pantalla -->
     <rect x="46" y="55" width="80" height="56" rx="5" fill="#2a0808" stroke="#ff4d4d" stroke-width="1.8"/>
     <line x1="54" y1="68" x2="94"  y2="68" stroke="#ff4d4d" stroke-width="1.2" opacity=".8"/>
     <line x1="54" y1="77" x2="114" y2="77" stroke="#ff4d4d" stroke-width="1.2" opacity=".5"/>
     <line x1="54" y1="86" x2="86"  y2="86" stroke="#ff4d4d" stroke-width="1.2" opacity=".7"/>
     <line x1="54" y1="95" x2="106" y2="95" stroke="#ff4d4d" stroke-width="1.2" opacity=".4"/>
+    <!-- cursor pantalla SMIL -->
     <rect x="54" y="102" width="6" height="7" rx="1" fill="#ff4d4d">
       <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
     </rect>
+    <!-- bisagra -->
     <rect x="46" y="111" width="80" height="3" rx="1" fill="#3a1010" stroke="#ff4d4d" stroke-width=".8"/>
+    <!-- base -->
     <rect x="40" y="114" width="92" height="24" rx="4" fill="#2a0808" stroke="#ff4d4d" stroke-width="1.8"/>
+    <!-- trackpad -->
     <rect x="68" y="120" width="28" height="12" rx="3" fill="none" stroke="#ff4d4d" stroke-width="1" opacity=".6"/>
   </g>
 
-  <g class="glow">
-    <text class="mo ascii-row r1" font-size="14" x="258" y="50">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;  &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;</text>
-    <text class="mo ascii-row r2" font-size="14" x="258" y="68">&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2588;&#x2588;&#x2557;&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2550;&#x2550;&#x255D;</text>
-    <text class="mo ascii-row r3" font-size="14" x="258" y="86">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2554;&#x255D;&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;</text>
-    <text class="mo ascii-row r4" font-size="14" x="258" y="104">&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2588;&#x2588;&#x2557;&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;</text>
-    <text class="mo ascii-row r5" font-size="14" x="258" y="122">&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x2588;&#x2588;&#x2551;&#x255A;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;</text>
-    <text class="mo ascii-row r6" font-size="14" x="258" y="140">&#x255A;&#x2550;&#x255D;&#x00A0;&#x00A0;&#x255A;&#x2550;&#x255D;&#x00A0;&#x255A;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x255D;</text>
+  <!-- RC ASCII art con fade por filas SMIL -->
+  <g font-family="'Courier New', monospace" font-size="14" fill="#ff4d4d">
+    <!-- pulse glow en todo el bloque -->
+    <g>
+      <animate attributeName="opacity" values="1;0.72;1" dur="3s" repeatCount="indefinite"/>
+      <text x="258" y="50" opacity="0">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;  &#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;<animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.5s" fill="freeze"/></text>
+      <text x="258" y="68" opacity="0">&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2588;&#x2588;&#x2557;&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2550;&#x2550;&#x255D;<animate attributeName="opacity" from="0" to="1" begin="0.25s" dur="0.5s" fill="freeze"/></text>
+      <text x="258" y="86" opacity="0">&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2554;&#x255D;&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.5s" fill="freeze"/></text>
+      <text x="258" y="104" opacity="0">&#x2588;&#x2588;&#x2554;&#x2550;&#x2550;&#x2588;&#x2588;&#x2557;&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<animate attributeName="opacity" from="0" to="1" begin="0.55s" dur="0.5s" fill="freeze"/></text>
+      <text x="258" y="122" opacity="0">&#x2588;&#x2588;&#x2551;&#x00A0;&#x00A0;&#x2588;&#x2588;&#x2551;&#x255A;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2557;<animate attributeName="opacity" from="0" to="1" begin="0.7s" dur="0.5s" fill="freeze"/></text>
+      <text x="258" y="140" opacity="0">&#x255A;&#x2550;&#x255D;&#x00A0;&#x00A0;&#x255A;&#x2550;&#x255D;&#x00A0;&#x255A;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x255D;<animate attributeName="opacity" from="0" to="1" begin="0.85s" dur="0.5s" fill="freeze"/></text>
+    </g>
   </g>
 
-  <g class="ico">
+  <!-- MONEDA EURO derecha, cy=96 -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.5s" fill="freeze"/>
     <circle cx="594" cy="96" r="40" fill="#2a0808" stroke="#ff4d4d" stroke-width="2"/>
     <circle cx="594" cy="96" r="32" fill="none" stroke="#ff4d4d" stroke-width=".8" opacity=".4"/>
-    <text font-family="'Share Tech Mono','Courier New',monospace" font-size="44" font-weight="bold"
+    <text font-family="'Courier New', monospace" font-size="44" font-weight="bold"
           fill="#ff4d4d" text-anchor="middle" dominant-baseline="central" x="594" y="96">€</text>
   </g>
 
-  <text class="mo byline" font-size="13" fill="#cc3300" text-anchor="middle" x="340" y="185">&gt; by Roberto Cantero</text>
-  <rect class="cur" x="452" y="173" width="8" height="13" rx="1" fill="#ff4d4d"/>
-  <text class="mo title" font-size="12" fill="#ffe5e5" text-anchor="middle" letter-spacing="2" x="340" y="207">PREDICCIÓN DE PRECIO DE PORTÁTILES · KAGGLE</text>
+  <!-- byline -->
+  <text font-family="'Courier New', monospace" font-size="13" fill="#cc3300"
+        text-anchor="middle" x="340" y="185" opacity="0">&gt; by Roberto Cantero
+    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.5s" fill="freeze"/>
+  </text>
+
+  <!-- cursor byline SMIL -->
+  <rect x="452" y="173" width="8" height="13" rx="1" fill="#ff4d4d">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- título -->
+  <text font-family="'Courier New', monospace" font-size="12" fill="#ffe5e5"
+        text-anchor="middle" letter-spacing="2" x="340" y="207" opacity="0">PREDICCIÓN DE PRECIO DE PORTÁTILES · KAGGLE
+    <animate attributeName="opacity" from="0" to="1" begin="1.4s" dur="0.5s" fill="freeze"/>
+  </text>
+
 </svg>
