@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/RobertoCantero82/nombre-repo/main/banner.svg" .../>
+<img src="https://raw.githubusercontent.com/RobertoCantero82/prediccion-precio-portatiles-kaggle/main/laptop_price_predictor_banner.svg" alt="Laptop Price Predictor" width="100%"/>
 
 </div>
 
